@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashiq Mohamed A - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Ashiq Mohamed A</h1>
+                <p class="tagline">Software Engineer | Web Developer | AI & Tech Explorer</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <strong class="highlight">Ashiq Mohamed</strong></h1>
+                <p class="hero-subtitle">Passionate Software Engineer and problem solver creating innovative digital experiences.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                    <img src="profile.jpg" alt="Ashiq Mohamed A - Profile Picture" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>Aspiring Computer Science student skilled in programming, web development, and database management, with additional interest in AI and emerging technologies. With expertise in modern web technologies, I bring ideas to life through clean code and creative design. Experienced through academic projects, internships, and technical events, bringing problem-solving ability, adaptability, and teamwork to diverse software and data-driven roles.</p>
+                    
+                    <h3>My Journey</h3>
+                    <p>My journey in technology began during my higher secondary education, where I discovered my passion for programming and problem-solving. Currently pursuing my B.E. in Computer Science and Engineering at Sona College of Technology, I've been actively developing my skills in web development, database management, and AI technologies. Through academic projects, I've built practical applications, gaining hands-on experience with full-stack development. I'm constantly exploring emerging technologies and expanding my knowledge in machine learning and artificial intelligence.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Programming Languages</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Core Technologies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Academic Years</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <div class="education">
+                        <div class="education-item">
+                            <h4>B.E. Computer Science and Engineering</h4>
+                            <p class="institution">Sona College of Technology</p>
+                            <p class="duration">2023-2027 (Pursuing)</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Higher Secondary Certificate (HSC)</h4>
+                            <p class="institution">I.S.E.D. Matriculation Higher Secondary School</p>
+                            <p class="duration">2021-2023 (Completed)</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Secondary School Leaving Certificate (SSLC)</h4>
+                            <p class="institution">I.S.E.D. Matriculation Higher Secondary School</p>
+                            <p class="duration">2019-2021 (Completed)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="90">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar" data-percent="90">
+                                <div class="skill-progress" style="--percent: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="90">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar" data-percent="90">
+                                <div class="skill-progress" style="--percent: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="65">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar" data-percent="65">
+                                <div class="skill-progress" style="--percent: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="55">
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar" data-percent="55">
+                                <div class="skill-progress" style="--percent: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="95">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar" data-percent="95">
+                                <div class="skill-progress" style="--percent: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="95">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar" data-percent="95">
+                                <div class="skill-progress" style="--percent: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="75">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar" data-percent="75">
+                                <div class="skill-progress" style="--percent: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="75">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar" data-percent="75">
+                                <div class="skill-progress" style="--percent: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="90">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar" data-percent="90">
+                                <div class="skill-progress" style="--percent: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="70">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar" data-percent="70">
+                                <div class="skill-progress" style="--percent: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="85">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar" data-percent="85">
+                                <div class="skill-progress" style="--percent: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="65">
+                            <span class="skill-name">Oracle</span>
+                            <div class="skill-bar" data-percent="65">
+                                <div class="skill-progress" style="--percent: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="70">
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar" data-percent="70">
+                                <div class="skill-progress" style="--percent: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="60">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar" data-percent="60">
+                                <div class="skill-progress" style="--percent: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="65">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar" data-percent="65">
+                                <div class="skill-progress" style="--percent: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>CS Fundamentals</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="90">
+                            <span class="skill-name">Data Structures & Algorithms</span>
+                            <div class="skill-bar" data-percent="90">
+                                <div class="skill-progress" style="--percent: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="75">
+                            <span class="skill-name">DBMS</span>
+                            <div class="skill-bar" data-percent="75">
+                                <div class="skill-progress" style="--percent: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="70">
+                            <span class="skill-name">Operating Systems</span>
+                            <div class="skill-bar" data-percent="70">
+                                <div class="skill-progress" style="--percent: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="50">
+                            <span class="skill-name">Computer Networks</span>
+                            <div class="skill-bar" data-percent="50">
+                                <div class="skill-progress" style="--percent: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="85">
+                            <span class="skill-name">Object Oriented Programming</span>
+                            <div class="skill-bar" data-percent="85">
+                                <div class="skill-progress" style="--percent: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Artificial Intelligence</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">Machine Learning</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="75">
+                            <span class="skill-name">Deep Learning</span>
+                            <div class="skill-bar" data-percent="75">
+                                <div class="skill-progress" style="--percent: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="70">
+                            <span class="skill-name">NLP</span>
+                            <div class="skill-bar" data-percent="70">
+                                <div class="skill-progress" style="--percent: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Android App</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">Android Studio</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-percent="85">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar" data-percent="85">
+                                <div class="skill-progress" style="--percent: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="85">
+                            <span class="skill-name">JSON</span>
+                            <div class="skill-bar" data-percent="85">
+                                <div class="skill-progress" style="--percent: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="80">
+                            <span class="skill-name">XAMPP</span>
+                            <div class="skill-bar" data-percent="80">
+                                <div class="skill-progress" style="--percent: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="75">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar" data-percent="75">
+                                <div class="skill-progress" style="--percent: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-percent="90">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-bar" data-percent="90">
+                                <div class="skill-progress" style="--percent: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Parking Website</h3>
+                        <p>A comprehensive parking management system with slot booking, navigation to available slots, and real-time availability tracking. Features include user authentication, booking management, and real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vehicle Service History Tracking App</h3>
+                        <p>A comprehensive database management system for vehicle workshops to track service history, maintenance records, and customer information. Features include service scheduling, history tracking, and detailed reporting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A modern, responsive portfolio website showcasing my work and skills. Built with pure HTML and CSS, featuring smooth animations and clean design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-outline">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="certificates-gallery">
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Public/Certificates/Artificial Intelligence Primer Certification.jpg" alt="AI Primer Certification" loading="lazy">
+                        <div class="certificate-overlay">
+                            <div class="certificate-info">
+                                <h3>Artificial Intelligence Primer</h3>
+                                <p>Comprehensive understanding of AI fundamentals and applications</p>
+                                <a href="Public/Certificates/Artificial Intelligence Primer Certification.jpg" target="_blank" class="view-certificate-btn">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Public/Certificates/Design Thinking - A Primer.jpg" alt="Design Thinking Certification" loading="lazy">
+                        <div class="certificate-overlay">
+                            <div class="certificate-info">
+                                <h3>Design Thinking - A Primer</h3>
+                                <p>Innovative problem-solving methodology and creative thinking</p>
+                                <a href="Public/Certificates/Design Thinking - A Primer.jpg" target="_blank" class="view-certificate-btn">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Public/Certificates/Google Analytics Certification.jpg" alt="Google Analytics Certification" loading="lazy">
+                        <div class="certificate-overlay">
+                            <div class="certificate-info">
+                                <h3>Google Analytics Certification</h3>
+                                <p>Data analysis and web analytics expertise</p>
+                                <a href="Public/Certificates/Google Analytics Certification.jpg" target="_blank" class="view-certificate-btn">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Public/Certificates/Principles of Generative AI Certification.jpg" alt="Generative AI Certification" loading="lazy">
+                        <div class="certificate-overlay">
+                            <div class="certificate-info">
+                                <h3>Principles of Generative AI</h3>
+                                <p>Advanced AI concepts and generative technology applications</p>
+                                <a href="Public/Certificates/Principles of Generative AI Certification.jpg" target="_blank" class="view-certificate-btn">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-item">
+                    <div class="certificate-image">
+                        <img src="Public/Certificates/Python Foundation Certification.jpg" alt="Python Foundation Certification" loading="lazy">
+                        <div class="certificate-overlay">
+                            <div class="certificate-info">
+                                <h3>Python Foundation</h3>
+                                <p>Strong foundation in Python programming and development</p>
+                                <a href="Public/Certificates/Python Foundation Certification.jpg" target="_blank" class="view-certificate-btn">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <div class="resume-info">
+                    <h3>Download My Resume</h3>
+                    <p>Get a detailed overview of my experience, education, and skills in a professional format.</p>
+                    <div class="resume-features">
+                        <div class="feature">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Professional PDF Format</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-download"></i>
+                            <span>Instant Download</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Print Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-download">
+                    <a href="resume.pdf" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i>
+                        Download Resume (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>ashiqmohamed0554@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 81220 55011</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Salem, Tamilnadu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Ashiq-A03" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ashiq-mohamed-0a243428b/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/16trKcZZqS/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Ashiq_774?t=yo3_BdWsvvM4zmh-WGOvRA&s=09" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/__.a.s.h.i.q.__?igsh=ejN5bno1NW85N3pw" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span id="btnText">Send Message</span>
+                        </button>
+                    </form>
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Ashiq Mohamed A</h3>
+                    <p>Web Developer & Designer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> ashiqmohamed0554@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 81220 55011</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ashiq Mohamed A. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form JavaScript -->
+    <script>
+        // Contact form handling with email functionality
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            
+            // Send via FormSubmit AJAX API directly to your Gmail
+            fetch('https://formsubmit.co/ajax/ashiqmohamed0554@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    _subject: `Portfolio Contact: ${formData.subject}`,
+                    _template: 'table',
+                    _captcha: 'false'
+                })
+            })
+            .then(function(response) {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(function() {
+                formMessage.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.</div>';
+                formMessage.style.display = 'block';
+                formMessage.className = 'form-message success';
+                document.getElementById('contactForm').reset();
+            })
+            .catch(function(error) {
+                console.error('Form submission error:', error);
+                formMessage.innerHTML = '<div class="error-message"><i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again later.</div>';
+                formMessage.style.display = 'block';
+                formMessage.className = 'form-message error';
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                setTimeout(function() {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
+    
+    <!-- Temporarily disabled JavaScript to test Chrome rendering -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html> 
