@@ -226,6 +226,33 @@ p {
     transform: scale(1.05);
 }
 
+/* Mobile Hero Layout - Profile before text */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 2;
+    }
+    
+    .hero-profile {
+        order: 1;
+    }
+    
+    .hero-content {
+        transform: none;
+        max-width: 100%;
+    }
+    
+    .profile-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
+
 /* Button Styles */
 .btn {
     display: inline-flex;
