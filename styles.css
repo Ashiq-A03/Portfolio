@@ -846,6 +846,13 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Mobile: header should not be fixed */
+    .header {
+        position: static;
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+
     .nav-menu {
         display: none;
     }
@@ -857,7 +864,7 @@ p {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 180px 1rem 3rem;
+        padding: 6rem 1rem 3rem;
         margin-bottom: 2rem;
     }
     
