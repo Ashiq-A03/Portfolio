@@ -22,6 +22,7 @@
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#internships">Internships</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -420,8 +421,62 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small btn-outline">View Code</a>
+                            <a href="https://github.com/Ashiq-A03/Portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">View Code</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships & Experiences Section -->
+    <section id="internships" class="internships">
+        <div class="container">
+            <h2 class="section-title">Internships & Experiences</h2>
+            <div class="internships-container">
+                <div class="internship-item">
+                    <div class="internship-info">
+                        <div class="internship-main">
+                            <h3>Web Development</h3>
+                            <h4>CODSOFT</h4>
+                            <p class="internship-duration">August - September 2025</p>
+                        </div>
+                        <div class="internship-status ongoing">
+                            <span>Ongoing</span>
+                        </div>
+                    </div>
+                    <div class="internship-actions">
+                        <button class="btn btn-small btn-outline details-btn" onclick="openInternshipDetails('codsoft')">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                        <button class="btn btn-small btn-outline certificate-btn" disabled>
+                            <i class="fas fa-certificate"></i>
+                            Coming Soon
+                        </button>
+                    </div>
+                </div>
+
+                <div class="internship-item">
+                    <div class="internship-info">
+                        <div class="internship-main">
+                            <h3>Full Stack Web Development</h3>
+                            <h4>Cistron Software</h4>
+                            <p class="internship-duration">July 2025</p>
+                        </div>
+                        <div class="internship-status completed">
+                            <span>Completed</span>
+                        </div>
+                    </div>
+                    <div class="internship-actions">
+                        <button class="btn btn-small btn-outline details-btn" onclick="openInternshipDetails('cistron')">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </button>
+                        <a href="Public/Internships/Full Stack Web Development - Cistron Software.jpg" target="_blank" class="btn btn-small btn-outline certificate-btn">
+                            <i class="fas fa-certificate"></i>
+                            View Certificate
+                        </a>
                     </div>
                 </div>
             </div>
@@ -654,22 +709,20 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Ashiq Mohamed A. All rights reserved.</p>
+                <p>&copy; 2025 Ashiq Mohamed A. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Contact Form JavaScript -->
     <script>
-        // Contact form handling with email functionality
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const formMessage = document.getElementById('formMessage');
-            
-            // Get form data
+
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -677,11 +730,9 @@
                 message: document.getElementById('message').value
             };
             
-            // Show loading state
             submitBtn.disabled = true;
             btnText.textContent = 'Sending...';
             
-            // Send via FormSubmit AJAX API directly to your Gmail
             fetch('https://formsubmit.co/ajax/ashiqmohamed0554@gmail.com', {
                 method: 'POST',
                 headers: {
@@ -724,6 +775,126 @@
         });
     </script>
     
+    <!-- Internship Details Modal -->
+    <div id="internshipModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Internship Details</h3>
+                <span class="close" onclick="closeInternshipModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Internship Details JavaScript -->
+    <script>
+        const internshipDetails = {
+            codsoft: {
+                title: "Web Development Internship",
+                company: "CODSOFT",
+                duration: "August - September 2025",
+                status: "Ongoing",
+                description: "Comprehensive web development training covering modern technologies and best practices. This internship provides hands-on experience with real-world projects and industry-standard development workflows.",
+                projects: [
+                    "Portfolio Website - Modern responsive portfolio with glassmorphism design",
+                    "Landing Page - Professional landing page with animations and forms",
+                    "Calculator Application - Interactive calculator with advanced functionality"
+                ],
+                technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Modern CSS"],
+                skills: ["Frontend Development", "UI/UX Design", "Responsive Layouts", "CSS Animations", "JavaScript DOM Manipulation"],
+                achievements: "Successfully completed multiple projects demonstrating proficiency in modern web development techniques and responsive design principles."
+            },
+            cistron: {
+                title: "Full Stack Web Development Internship",
+                company: "Cistron Software",
+                duration: "July 2025",
+                status: "Completed",
+                description: "Intensive full-stack development program focusing on modern web technologies, database management, and responsive design principles. Worked on comprehensive projects covering both frontend and backend development.",
+                projects: [
+                    "JSON Data Management Project - RESTful API with JSON data handling",
+                    "React.js Application - Modern React application with state management"
+                ],
+                technologies: ["React.js", "Node.js", "JSON", "REST APIs", "Database Design", "Full Stack Development"],
+                skills: ["React Development", "API Development", "Database Management", "Backend Integration", "Modern JavaScript", "Project Architecture"],
+                achievements: "Successfully completed full-stack projects demonstrating ability to work with both frontend and backend technologies, earning certification in Full Stack Web Development."
+            }
+        };
+
+        function openInternshipDetails(internshipId) {
+            const modal = document.getElementById('internshipModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            const details = internshipDetails[internshipId];
+            if (!details) return;
+            
+            modalTitle.textContent = details.title;
+            
+            modalBody.innerHTML = `
+                <div class="internship-detail-content">
+                    <div class="detail-section">
+                        <h4><i class="fas fa-building"></i> Company</h4>
+                        <p>${details.company}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-calendar"></i> Duration</h4>
+                        <p>${details.duration}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-info-circle"></i> Description</h4>
+                        <p>${details.description}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-code"></i> Key Projects</h4>
+                        <ul>
+                            ${details.projects.map(project => `<li>${project}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-tools"></i> Technologies Used</h4>
+                        <div class="tech-tags">
+                            ${details.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-star"></i> Skills Developed</h4>
+                        <div class="skill-tags">
+                            ${details.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4><i class="fas fa-trophy"></i> Achievements</h4>
+                        <p>${details.achievements}</p>
+                    </div>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInternshipModal() {
+            const modal = document.getElementById('internshipModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('internshipModal');
+            if (event.target === modal) {
+                closeInternshipModal();
+            }
+        }
+    </script>
+
     <!-- Temporarily disabled JavaScript to test Chrome rendering -->
     <!-- <script src="script.js"></script> -->
 </body>
