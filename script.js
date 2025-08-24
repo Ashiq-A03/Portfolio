@@ -1,4 +1,3 @@
-// Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -36,8 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Close mobile menu when clicking outside
+
     document.addEventListener('click', function(event) {
         if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
             navMenu.classList.remove('active');
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Header scroll effect
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
@@ -62,7 +59,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -79,7 +75,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animate skill bars on scroll
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
@@ -92,7 +87,6 @@ function animateSkillBars() {
     });
 }
 
-// Intersection Observer for skill bars animation
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
@@ -107,7 +101,6 @@ const skillObserver = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe skill bars
 document.addEventListener('DOMContentLoaded', function() {
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
@@ -115,22 +108,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Form handling
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
+
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
-            
-            // Basic validation
+
             if (!name || !email || !subject || !message) {
                 showNotification('Please fill in all fields.', 'error');
                 return;
@@ -140,8 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
-            
-            // Simulate form submission
+
             showNotification('Sending message...', 'info');
             
             setTimeout(() => {
@@ -152,21 +141,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Email validation
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Notification system
 function showNotification(message, type = 'info') {
-    // Remove existing notifications
+
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         existingNotification.remove();
     }
-    
-    // Create notification element
+
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -175,8 +161,7 @@ function showNotification(message, type = 'info') {
             <button class="notification-close">&times;</button>
         </div>
     `;
-    
-    // Add styles
+
     notification.style.cssText = `
         position: fixed;
         top: 100px;
@@ -191,23 +176,19 @@ function showNotification(message, type = 'info') {
         transform: translateX(100%);
         transition: transform 0.3s ease;
     `;
-    
-    // Add to page
+
     document.body.appendChild(notification);
-    
-    // Animate in
+
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
-    // Close button functionality
+
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => notification.remove(), 300);
     });
-    
-    // Auto remove after 5 seconds
+
     setTimeout(() => {
         if (notification.parentNode) {
             notification.style.transform = 'translateX(100%)';
@@ -216,7 +197,6 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Add CSS for notifications
 const notificationStyles = document.createElement('style');
 notificationStyles.textContent = `
     .notification-content {
@@ -246,22 +226,19 @@ notificationStyles.textContent = `
 `;
 document.head.appendChild(notificationStyles);
 
-// Typing effect for hero title
 function typeWriter(element, speed = 100) {
-    // Store the original HTML structure
+
     const originalHTML = element.innerHTML;
-    
-    // Extract just the text content for typing effect
+
     const textContent = element.textContent || element.innerText;
-    
-    // Clear the element
+
     element.innerHTML = '';
     
     let i = 0;
     
     function type() {
         if (i < textContent.length) {
-            // Reconstruct the HTML with the typed text
+
             if (i === 0) {
                 element.innerHTML = 'Hi, I\'m <span class="highlight">';
             } else if (i === textContent.length - 1) {
@@ -277,20 +254,6 @@ function typeWriter(element, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
-// Temporarily disabled to fix HTML rendering issue
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        setTimeout(() => {
-            typeWriter(heroTitle, 50);
-        }, 500);
-    }
-});
-*/
-
-// Add scroll reveal animation
 function revealOnScroll() {
     const elements = document.querySelectorAll('.project-card, .skill-category, .stat');
     
@@ -304,7 +267,6 @@ function revealOnScroll() {
     });
 }
 
-// Add CSS for scroll reveal
 const revealStyles = document.createElement('style');
 revealStyles.textContent = `
     .project-card, .skill-category, .stat {
@@ -320,20 +282,16 @@ revealStyles.textContent = `
 `;
 document.head.appendChild(revealStyles);
 
-// Listen for scroll events
 window.addEventListener('scroll', revealOnScroll);
 
-// Initialize reveal on page load
 document.addEventListener('DOMContentLoaded', function() {
     revealOnScroll();
 });
 
-// Add loading animation
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
 
-// Add CSS for loading animation
 const loadingStyles = document.createElement('style');
 loadingStyles.textContent = `
     body {
@@ -347,7 +305,6 @@ loadingStyles.textContent = `
 `;
 document.head.appendChild(loadingStyles);
 
-// Add mobile menu styles
 const mobileMenuStyles = document.createElement('style');
 mobileMenuStyles.textContent = `
     @media (max-width: 768px) {
